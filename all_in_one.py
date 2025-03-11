@@ -4,7 +4,16 @@ def get_date_of_birth(id_number: str) -> str:
     STEP 2: Extract the date of birth from the ID number and return it as a string
     return format: DD/MM/YY:
     """
-    pass
+    date_of_birth = id_number[:6]
+    DD_MM_YY = date_of_birth(f"'DD':{[:2]} / 'MM':{[2:4]} / 'YY':{[4:6]}")
+    print(DD_MM_YY)
+    return DD_MM_YY
+
+    
+
+    
+
+    
 
 # Question 2
 def get_gender(id_number: str) -> str:
@@ -15,7 +24,14 @@ def get_gender(id_number: str) -> str:
     Formula: 1 if the ID number's 7th to 10th digit is less than 5000, the person is
     female and if it is greater than 4999, the person is male.
     """
-    pass
+   
+    if id_number < "5000":
+        return "Male"
+    elif id_number > "4900" :
+        return "Female"
+    else:
+        return "Female"
+
 
 # Question 3
     """
@@ -34,7 +50,14 @@ def find_even_numbers(numbers):
     in a tuple
 
     Hint: use modulus (%)"""
-    pass
+    for num in range(0,6):
+        if num % 2 == 0:
+            num += 1
+            return num
+        else:
+            return numbers
+
+
 
 # Question 5
 def find_odd_numbers(numbers):
@@ -42,7 +65,8 @@ def find_odd_numbers(numbers):
     in a tuple
 
     Hint: use modulus (%)"""
-    pass
+
+
 
 # Question 6
 def return_list_stats(numbers):
@@ -62,22 +86,21 @@ def return_list_stats(numbers):
         number_of_odd_numbers : the total number of even numbers in the list
              'numbers'
     """
-    pass
+
+    
 
 # Question 7
 def draw_triangle_reversed(height: int) -> None:
-    """
-    Draw an inverted number triangle where each row begins with its position number,
-    with the top row having the most repeated numbers and each row below having one fewer repetition.
+    """Draw an inverted number triangle where each row begins with its position number,
+     with the top row having the most repeated numbers and each row below having one fewer repetition.
 
-    Parameters:
-        height (int): The height of the triangle. Must be a positive integer.
+     Parameters:
+     height (int): The height of the triangle. Must be a positive integer.
 
     Returns:
-        None: Prints the inverted triangle pattern directly to console.
-
-    """
-    pass
+     None: Prints the inverted triangle pattern directly to console."""
+    for i in range(10):
+     print("*"*i)
 
 # Question 8
 def draw_triangle_prime(height: int) -> None:
@@ -131,3 +154,4 @@ def pascal_triangle(n):
      * 1   5  10   10  5   1
     """
     pass
+
